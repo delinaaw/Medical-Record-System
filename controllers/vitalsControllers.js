@@ -1,5 +1,5 @@
 // controllers/vitalsController.js
-const Vitals = require('../models/Vitals'); // You'll create this model later
+const Vitals = require('../models/Vitals');
 
 const submitVitals = async (req, res) => {
     // Implement the logic to submit vitals

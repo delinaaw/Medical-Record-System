@@ -10,14 +10,19 @@ mongoose.connect('mongodb://localhost/your_database_name', { useNewUrlParser: tr
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
-    console.log('Connected to MongoDB');
+  console.log('Connected to MongoDB');
 });
 
 // Test route
 app.get('/', (req, res) => {
-    res.send('Hello, world!');
+  res.send('Hello, world!');
 });
 
+// Use routes
+app.use(require('./routes/patientsRoutes'));
+app.use(require('./routes/encountersRoutes'));
+app.use(require('./routes/vitalsRoutes'));
+
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
