@@ -1,4 +1,3 @@
-// models/Encounter.js
 const mongoose = require('mongoose');
 
 const encounterSchema = new mongoose.Schema({

@@ -1,12 +1,9 @@
-// controllers/encountersController.js
 const Encounter = require('../models/Encounter');
 
 const startEncounter = async (req, res) => {
-    // Implement the logic to start an encounter
 };
 
 const getAllEncounters = async (req, res) => {
-    // Implement the logic to get all encounters
 };
 
 const getEncounterDetails = async (req, res) => {
